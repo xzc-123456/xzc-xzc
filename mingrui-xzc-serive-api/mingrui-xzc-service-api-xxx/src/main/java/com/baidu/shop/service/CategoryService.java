@@ -16,19 +16,7 @@ public interface CategoryService {
     @GetMapping(value = "category/list")
     Result<List<CategoryEntity>> getCategoryById(Integer pid);
 
-    @ApiOperation(value = "新增商品分类")
-    @PostMapping(value = "category/save")
-    Result<JsonObject> saveCategory(CategoryEntity categoryEntity);
-
-    @ApiOperation(value = "通过品牌ID查询分类信息")
-    @GetMapping(value = "category/brand")
-    Result<List<CategoryEntity>> getCategoryByBrandId(Integer brandId);
-
-    @ApiOperation(value = "通过id删除分类")
-    @DeleteMapping(value = "/category/del")
-    Result<JsonObject> deleteById(Integer id);
-
-    @ApiOperation(value = "修改分类名称")
-    @PutMapping(value = "/category/edit")
-    Result<JsonObject> editCategory(@RequestBody CategoryEntity CategoryEntity);
+    @ApiOperation(value = "通过Id删除当前分类")
+    @DeleteMapping(value = "/category/delete")
+    Result<JsonObject> deleteCategoryById(Integer id);
 }

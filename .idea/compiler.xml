@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mingrui-xzc-basics-eureka-server" />
         <module name="mingrui-xzc-service-xxx" />
+        <module name="mingrui-xzc-basic-zuul-server" />
         <module name="mingrui-xzc-commoms-core" />
         <module name="mingrui-xzc-service-api-xxx" />
       </profile>
@@ -15,6 +16,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mingrui-xzc-basic-zuul-server" options="-parameters" />
       <module name="mingrui-xzc-basics" options="-parameters" />
       <module name="mingrui-xzc-basics-eureka-server" options="-parameters" />
       <module name="mingrui-xzc-commoms" options="-parameters" />

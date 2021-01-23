@@ -61,4 +61,10 @@ public class CategoryServiceImpl extends BaseApiService implements CategoryServi
         return this.setResultSuccess();
     }
 
+    @Override
+    public Result<JsonObject> deleteCategoryById(CategoryEntity categoryEntity) {
+        categoryMapper.updateByPrimaryKeySelective(categoryEntity);
+        return this.setResultSuccess();
+    }
+
 }

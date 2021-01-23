@@ -19,4 +19,8 @@ public interface CategoryService {
     @ApiOperation(value = "通过Id删除当前分类")
     @DeleteMapping(value = "/category/delete")
     Result<JsonObject> deleteCategoryById(Integer id);
+
+    @ApiOperation(value = "修改当前分类名称")
+    @PutMapping(value = "/category/edit")
+    Result<JsonObject> deleteCategoryById(@RequestBody CategoryEntity categoryEntity);
 }
